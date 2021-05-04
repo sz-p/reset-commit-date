@@ -1,0 +1,30 @@
+{
+    "name": "reset-commit-date",
+    "version": "1.0.0",
+    "description": "Reset commit date time to 00:00:00",
+    "author": "sz-p <sz_p@outlook.com>",
+    "license": "MIT",
+    "homepage": "https://github.com/sz-p/reset-commit-date",
+    "bugs": "https://github.com/sz-p/reset-commit-date/issues",
+    "dependencies": {},
+    "keywords": [
+        "git",
+        "commit",
+        "date",
+        "time"
+    ],
+    "files": [
+        "hook",
+        "install.js",
+        "README.md",
+        "uninstall.js"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sz-p/reset-commit-date"
+    },
+    "scripts": {
+        "install": "node install.js",
+        "uninstall": "node uninstall.js"
+    }
+}
