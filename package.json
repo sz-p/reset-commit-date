@@ -1,6 +1,6 @@
 {
     "name": "reset-commit-date",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Reset commit date time to 00:00:00",
     "author": "sz-p <sz_p@outlook.com>",
     "license": "MIT",
