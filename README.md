@@ -1,4 +1,4 @@
-# reset-commit-date
+# Reset-commit-date
 
 Reset commit date time to 00:00:00
 
