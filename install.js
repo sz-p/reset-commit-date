@@ -28,8 +28,10 @@ var git = path.resolve(root, '.git')
 // Bail out if we don't have an `.git` directory as the hooks will not get
 // triggered. If we do have directory create a hooks folder if it doesn't exist.
 //
-if (!exists(git) || !fs.lstatSync(git).isDirectory()) return;
-if (!exists(hooks)) fs.mkdirSync(hooks);
+if (!exists(git) || !fs.lstatSync(git).isDirectory()){
+  console.error('reset-commit-date: The hook was not installed. not find .git/hooks');
+  return;
+}if (!exists(hooks)) fs.mkdirSync(hooks);
 
 //
 // If there's an existing `reset-commit-date` hook we want to back it up instead of
