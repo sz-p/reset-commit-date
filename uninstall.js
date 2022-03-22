@@ -3,8 +3,11 @@
 var fs = require('fs'),
 	path = require('path'),
 	exists = fs.existsSync || path.existsSync,
-	postcommit = path.resolve(__dirname, '../..', '.git', 'hooks', 'post-commit');
-
+	root = path.resolve(__dirname, '..', '..')
+	while(root.includes("node_modules")){
+		root = path.resolve(root, "../")
+	}
+	postcommit = path.resolve(root, '.git', 'hooks', 'post-commit');
 //
 // Bail out if we don't have pre-commit file, it might be removed manually.
 //

@@ -10,6 +10,10 @@ var fs = require('fs')
   , root = path.resolve(__dirname, '..', '..')
   , exists = fs.existsSync || path.existsSync;
 
+  // when use like pnpm __dirname is not linked to root
+  while(root.includes("node_modules")){
+    root = path.resolve(root, "../")
+  }
 //
 // Gather the location of the possible hidden .git directory, the hooks
 // directory which contains all git hooks and the absolute location of the
